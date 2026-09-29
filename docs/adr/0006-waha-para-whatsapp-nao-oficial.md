@@ -7,7 +7,7 @@ Comparamos quatro alternativas:
 - **Baileys direto:** armazenamento de sessão e reconexão ficariam por nossa conta.
 - **whatsapp-web.js:** consome ~350 MB por número.
 
-Decidimos pelo WAHA com o motor GOWS. É Apache-2.0, com todos os recursos gratuitos desde a versão 2026.6.1, usa ~50 MB por número, guarda sessões no Postgres e publica releases mensais. Ele roda como artefato próprio (ADR-0001). O slice de WhatsApp não oficial fala com ele por HTTP e recebe os webhooks dele na fila.
+Decidimos pelo WAHA com o motor GOWS. É Apache-2.0, com todos os recursos gratuitos desde a versão 2026.6.1, usa ~50 MB por número, restaura as sessões sozinho depois de um reinício e publica releases mensais. As sessões ficam num volume local: o armazenamento Postgres do WAHA cria um banco por sessão e disputaria conexões com os slices ([05](../05-slices-e-deploy.md)). Ele roda como artefato próprio (ADR-0001). O slice de WhatsApp não oficial fala com ele por HTTP e recebe os webhooks dele na fila.
 
 ## Consequences
 

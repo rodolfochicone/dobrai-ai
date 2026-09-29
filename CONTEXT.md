@@ -36,6 +36,10 @@ _Avoid_: bot, chatbot, assistente
 Meta-agente com que um Membro conversa, no console ou a partir de um cliente oficial como Claude Code ou Codex, para criar e editar Rascunhos.
 _Avoid_: builder, Agent Builder, meta-agente
 
+**Sessão do Construtor**:
+Conversa entre um Membro e o Construtor sobre o Rascunho de um Agente.
+_Avoid_: conversa (reservado a Contatos), chat
+
 **Publicar**:
 Ato humano, feito no console, que transforma o Rascunho numa nova Versão do Agente; o Construtor nunca publica.
 _Avoid_: deploy, lançar, subir
@@ -92,9 +96,13 @@ _Avoid_: usuário, cliente, cliente final, lead
 Sequência de mensagens entre um Contato e a Organização que termina por resolução ou por inatividade; uma nova mensagem depois disso abre outra Conversa.
 _Avoid_: atendimento, sessão, ticket, chat
 
+**Transferir**:
+Ato do Agente de passar a Conversa aos Operadores; ele para de responder e a Conversa aguarda alguém Assumir.
+_Avoid_: handoff, transbordo, escalar
+
 **Assumir**:
-Ato de um Operador tomar uma Conversa do Agente, que para de responder até a Conversa ser devolvida.
-_Avoid_: handoff, transbordo, transferir
+Ato de um Operador tomar uma Conversa do Agente, transferida ou não, que para de responder até a Conversa ser devolvida.
+_Avoid_: handoff, transbordo
 
 **Teto de gasto**:
 Limite de custo de LLM de uma Organização ou de uma Conversa que, ao ser atingido, interrompe o Agente.
